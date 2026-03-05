@@ -43,7 +43,7 @@ ENV NODE_ENV=production \
   PAPERCLIP_DEPLOYMENT_MODE=local_trusted \
   PAPERCLIP_DEPLOYMENT_EXPOSURE=private
 
-RUN mkdir -p /paperclip && chown paperclip:paperclip /paperclip
+RUN mkdir -p /paperclip && chown -R paperclip:paperclip /paperclip /app
 VOLUME ["/paperclip"]
 EXPOSE 3100
 
